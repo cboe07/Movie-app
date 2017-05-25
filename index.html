@@ -11,6 +11,10 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+	<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
 	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
  -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -23,25 +27,33 @@
 <body>
 
 <div class="container">
-	<h1 class="text-center">DC Movie Database</h1>
-	<div class="row">
+	<div class="content">
+		<h1 class="text-center">DC Movie Database</h1>
+		<div class="row">
 
-		<div id="search-container" class="col-sm-12 text-center">
-			<form id="movie-form">
-				<input id="search-input" type="text" placeholder="Enter Movie Title" />
-				<button type="submit" class="btn btn-primary">Search</button>
-			</form>
-		</div>
-		<div id="movie-grid" class="col-sm-12">
-			
+			<div id="search-container" class="col-sm-12 text-center">
+				<form id="movie-form">
+					<input id="search-input" type="text" placeholder="Enter Movie Title" />
+					<button type="submit" class="btn btn-primary">Search</button>
+				</form>
+			</div>
+			<div class="button-row">
+				<div id="genre-buttons" class="col-sm-12 text-center">
+					<!-- jQuery, put buttons here -->
+				</div>
+			</div>
+
+			<div id="movie-grid" class="col-sm-12">
+				<!-- jQuery, put movie posters here -->
+			</div>
 		</div>
 	</div>
 </div>
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
   Launch demo modal
-</button>
+</button> -->
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -52,7 +64,9 @@
         <h4 class="modal-title" id="myModalLabel">Modal title</h4>
       </div>
       <div class="modal-body">
-        ...
+        <div class="modal-info">
+        	
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
